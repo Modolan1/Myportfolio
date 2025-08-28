@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorflipper</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .backgroundColor{
+    height: 700px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin:30px 200px;
+    background-color: #000;
+    
+}
+ .btn {
+    padding: 14px 50px;
+    /* background: #ff004f; */
+    margin: 30px auto;
+    display: block;
+    width: fit-content;
+    color: #000;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    text-decoration: none;
+ }
+ .red{
+    background-color: red;
+ }
+ .blue{
+    background-color: blue;
+ }
+  .green{
+    background-color: green;
+ }
+  .random{
+    background-color: rgb(0, 255, 179);
+ }
+
+ .backgroundColor h1 , p{
+    color: #fff;
+    font-weight: bold;
+ }
+    </style>
+</head>
+<body>
+    <div class="backgroundColor" id="backgroundColor">
+     <h1>Color Flipper</h1> 
+     <p> Click on botton to change background color</p>  
+    <button class=" btn red" id="red">Red</button>
+<button class=" btn blue" id="blue">Blue</button>
+<button class=" btn green" id="green">Green</button>
+<button class=" btn random" id="random">Random</button>
+</div>
+<script>
+    const redButton = document.getElementById('red');
+    const blueButton = document.getElementById('blue');
+    const greenButton = document.getElementById('green');
+    const randomButton = document.getElementById('random');
+
+    redButton.addEventListener('click', () => {
+        document.getElementById('backgroundColor').style.backgroundColor = 'red';
+    });
+
+    blueButton.addEventListener('click', () => {
+        document.getElementById('backgroundColor').style.backgroundColor = 'blue';
+    });
+
+    greenButton.addEventListener('click', () => {
+        document.getElementById('backgroundColor').style.backgroundColor = 'green';
+    });
+
+    randomButton.addEventListener('click', () => {
+        const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+        document.getElementById('backgroundColor').style.backgroundColor = randomColor;
+    });
+</script>
+</body>
+</html>

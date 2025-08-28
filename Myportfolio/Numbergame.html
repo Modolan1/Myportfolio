@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number guessing Game</title>
+<style>
+    div{
+        height: 400px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        margin-top: 60px;
+        align-items: center;
+        background-color: rgb(114, 235, 195);
+    }
+    input{
+        height: 35px;
+        width: 75px;
+        font-size: large;
+        text-align: center;
+    }
+    button{
+        padding: 10px 20px;
+        background-color: black;
+        border: none;
+        border-radius: 4px;
+        color: white;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button{
+        -webkit-appearance:none ;
+        margin: 0;
+    }
+     input[type="number"]{
+        -moz-appearance: textfield;
+
+     }
+     input:focus{
+        outline: none;
+     }
+     button:hover{
+        cursor: pointer;
+        background-color: grey;
+     }
+</style>
+</head>
+<body>
+    <div>
+        <h1>Number Guessing Game</h1>
+        <p> Guess a number between 1 to 10</p>
+        <input type="number" id="guess" min="1" max="10">
+        <button id="submit">Submit</button>
+        <p id="hint"></p>
+        <p id="attempt"></p>
+    </div>
+    <script>
+        //Declaring variables
+        let attempt = 0;
+        let randomNum = Math.floor(Math.random()*10 + 1);
+        const guess = document.getElementById("guess");
+        const hint = document.getElementById("hint");
+        const attemptText = document.getElementById("attempt");
+        console.log(randomNum);
+
+        //event listeners
+        submit.addEventListener('click',(CheckGuess));
+        
+           
+        function CheckGuess(){
+            const userValue = Number(guess.value);
+            attempt++;
+
+            //conditionals
+        if(userValue===randomNum){document.getElementById('hint').innerHTML ="Congratulations, you guessed right!";
+            }
+            else if(userValue< randomNum){ document.getElementById('hint').innerHTML= " Too low, try again!";
+            }else{ document.getElementById('hint').innerHTML ="Too high, try again! "
+            }
+
+            attemptText.textContent = "Attempts:" + attempt;
+        }
+
+        
+        
+
+    </script>
+</body>
+</html>

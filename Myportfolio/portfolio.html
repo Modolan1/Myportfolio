@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio website</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/500b4cf668.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- .........Header......... -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <i class="fa-solid fa-code"></i>
+                <!-- <img src="pictures/logo.jpg" alt="Logo" class="logo"> -->
+                <ul id="sidemenu"> 
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <div id="times"><i class="fas fa-times" onclick="closemenu()"></i></div>
+            </ul>
+            <div id="menu-bar"><i class="fas fa-bars" onclick="openmenu()"></i></div>
+            </nav>
+            <div class="header-text">
+                <h1>Hi I'm <span>Sukurat,</span> a passionate Web Developer</h1>
+                <p>I specialize in building modern, responsive,<br> and user-friendly websites that<br> bring ideas to life on the web.</p>
+                <a href="#contact" class="btn1">Get in Touch</a>
+            </div>
+        </div>
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="mypic.jpg" alt="Image1">
+                    </div>
+                    <!-- ...........About............ -->
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I am a creative and detail-oriented Web Developer with experience in designing and developing interactive websites and web applications. I focus on writing clean, efficient code and creating seamless user experiences. My goal is to combine functionality with aesthetics to deliver digital solutions that make an impact!</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                            <p class="tab-links" onclick="openTab('experience')">Experience </p>
+                            <p class="tab-links" onclick="openTab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Website Design</span><br>HTML5, CSS3, JavaScript (ES6+).</li>
+                                <li><span>Framework</span><br>React.js / Vue.js / Angular</li>
+                                <li><span>Backend Technology</span><br>Node.js, Express, MongoDB.</li>
+                                <li><span>Version Control</span><br>Git, GitHub, Version Control</li>
+                                  
+                            </ul>
+                    </div>
+                     <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>over 10 years</span><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</li>
+                                <li><span>Photo Editing</span><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</li>
+                                <li><span>Video Editing</span><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</li>
+                                <li><span>Adobe Photoshop</span><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</li>
+                                  
+                            </ul>
+                    </div>
+                     <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Lagos State University of Technology</span><br>Graduate in Computer science .</li>
+                                <li><span>University of Winnipeg</span><br>Diploma in Web application Development.</li>
+                                <li><span>Graphic designer</span><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</li>
+                                  
+                            </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ........services........ -->
+            <div id="services">
+                <div class="container">
+                    <h1 class="sub-title">My Services</h1>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <i class="fa-solid fa-record-vinyl"></i>
+                            <h2>UI/UX</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                            <a href="#" >Learn More</a>
+                        </div>
+                        
+                        <div class="service-item">
+                            <i class="fa-solid fa-image"></i>
+                            <h2>Backend development</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                            <a href="#" >Learn More</a>
+                        </div>
+                        <div class="service-item">
+                            <i class="fa-solid fa-file-video"></i>
+                            <h2>Graphic Design</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <!-- ........portfolio........ -->
+            <div id="portfolio">
+                <div class="container">
+                    <h1 class="sub-title">My Portfolio</h1>
+                    <div class="portfolio-list">
+                        <div class="portfolio-item">
+                            <img src="colorFlipper.png" alt="Portfolio 1">
+                            <div class="portfolio-info">
+                                <h3>Color flipper</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                                <a href="work.html"><i class="fa fa-link-slash">link</i></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="stopwatch.png" alt="Portfolio 2">
+                            <div class="portfolio-info">
+                                <h3>stop Watch</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                                <a href="stopWatch.html"><i class="fa fa-link-slash">link</i></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="numberGuessingGame.png" alt="Portfolio 3">
+                            <div class="portfolio-info">
+                                <h3>Number guessing game</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                                <a href="Numbergame.html"><i class="fa fa-link-slash">link</i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn">See More</a>
+                </div>
+            </div>
+            <!-- ........Contact........ -->
+            <div id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-left">
+                            <h1 class="sub-title">Contact Me</h1>
+                            <i class="fa-solid fa-envelope"></i><p> adejoke@gmail.com</p>
+                            <i class="fa-solid fa-mobile-screen"><p>+234 123 4567</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <a href="#" download="" class=" btn btn2">Download CV</a>
+                        </div>
+                        <div class="contact-right">
+                            <form action="">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="message" rows="6" placeholder="Enter your Message"></textarea>
+                            <button type="submit" placeholder="Submit" class="btn2">Submit</button>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <p> Copyright@Sukurat.Made by Modolan</p>
+                    </div>
+                   </div>
+            <script>
+                var tabLinks = document.getElementsByClassName('tab-links');
+                var tabContents = document.getElementsByClassName('tab-contents');
+                function openTab(tabName) {
+                    for (tablink of tabLinks) {
+                        tablink.classList.remove('active-link');
+                    }
+                    for (tabContent of tabContents) {
+                        tabContent.classList.remove('active-tab');
+                    }
+                    event.currentTarget.classList.add('active-link');
+                    document.getElementById(tabName).classList.add('active-tab');
+                }
+            </script>
+            <script>
+                var sidemenu = document.getElementById("sidemenu");
+
+                function openmenu(){
+                    sidemenu.style.right = 0;
+                }
+            </script>
+            <script>
+                var sidemenu = document.getElementById("sidemenu");
+
+                function closemenu(){
+                    sidemenu.style.right = "-200px";
+                }
+            </script>
+</body>
+</html>
