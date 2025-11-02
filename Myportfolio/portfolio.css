@@ -24,6 +24,7 @@ body {
 .logo{
     width: 30px;
     height: 30px;
+    margin-left: 20px;
 
 }
 .container{
@@ -33,7 +34,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 } 
 
 nav ul li{
@@ -83,6 +84,11 @@ nav ul li a:hover::after{
     cursor: pointer;
     transition: background 0.3s ease;
     text-decoration: none;
+    transition: 0.5s ease;
+}
+.header-text .btn1:hover {
+    background: #fff;
+    color: #ff004f;
 }
 .header-text h1{
     font-size: 50px;
@@ -300,7 +306,8 @@ nav ul li a:hover::after{
 
 }
 .btn:hover {
-    background: #ff004f;
+    background: #fff;
+    color: #ff004f;
 }
 /* .............contact............ */
 .contact-left{
@@ -370,6 +377,10 @@ form .btn2{
     color: #fff;
     border-radius: 6px;
 }
+form .btn2:hover {
+    background: #fff;
+    color: #ff004f;
+}
 .copyright{
     width: 100%;
     text-align: center;
@@ -390,7 +401,7 @@ nav .fas{
         font-size: 16px;
     }
     .header-text h1{
-       font-size: 40px;
+       font-size: 30px;
     }
 
     nav .fas{
@@ -403,7 +414,7 @@ nav .fas{
         background: #ff004f;
         position: fixed;
         top: 0;
-        right: -200px;
+        right: 0;
         width: 200px;
         height: 100vh;
         padding-top: 50px;
@@ -444,6 +455,12 @@ nav .fas{
         flex-basis: 100%;
     }
     .copyright{
+        width: 100%;
         font-size: 14px;
+        text-align: center;
+        background: #262626;
+        padding: 25px 0;
+        font-weight: 300;
+        margin-top: 20px;
     }
 }
