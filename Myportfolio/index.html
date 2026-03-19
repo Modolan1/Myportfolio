@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://kit.fontawesome.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://ka-f.fontawesome.com; img-src 'self' data: https:; connect-src 'self' https://ka-f.fontawesome.com;">
     <title>Personal Portfolio website</title>
     <link rel="stylesheet" href="portfolio.css">
     <script src="https://kit.fontawesome.com/500b4cf668.js" crossorigin="anonymous"></script>
@@ -107,6 +108,31 @@
                     <h1 class="sub-title">My Portfolio</h1>
                     <div class="portfolio-list">
                         <div class="portfolio-item">
+                            <img src="image1.png" alt="Portfolio 3">
+                            <div class="portfolio-info">
+                                <h3>Full Stack Food Ordering Application</h3>
+                                <p>A full stack application built with React, Node.js, Express, and MongoDB.</p>
+                                <a href="https://fullstack-ordering-frontend.onrender.com"><i class="fa fa-link-slash">link</i></a>
+                            </div>
+                        </div>
+                         <div class="portfolio-item">
+                            <img src="deskTopScreen.png" alt="Portfolio 3">
+                            <div class="portfolio-info">
+                                <h3>Language Translator App</h3>
+                                <p>Fully functional Multi-Language Learning Web Application
+                                  • User authentication and profile system.</p>
+                                <a href="https://language-translator-zeta-nine.vercel.app/"><i class="fa fa-link-slash">link</i></a>
+                            </div>
+                        </div>
+                         <div class="portfolio-item">
+                            <img src="foodSite.png" alt="Portfolio 4">
+                            <div class="portfolio-info">
+                                <h3>Food Website</h3>
+                                <p>A simple food website for online food ordering</p>
+                                <a href="https://foodwebcom.vercel.app/"><i class="fa fa-link-slash">link</i></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-item">
                             <img src="colorFlipper.png" alt="Portfolio 1">
                             <div class="portfolio-info">
                                 <h3>Color flipper</h3>
@@ -130,31 +156,7 @@
                                 <a href="Numbergame.html"><i class="fa fa-link-slash">link</i></a>
                             </div>
                         </div>
-                         <div class="portfolio-item">
-                            <img src="fullStack-food-app.png" alt="Portfolio 3">
-                            <div class="portfolio-info">
-                                <h3>Full Stack Application</h3>
-                                <p>A full stack application built with React, Node.js, and MongoDB.</p>
-                                <a href="Numbergame.html"><i class="fa fa-link-slash">link</i></a>
-                            </div>
-                        </div>
-                         <div class="portfolio-item">
-                            <img src="deskTopScreen.png" alt="Portfolio 3">
-                            <div class="portfolio-info">
-                                <h3>Language Translator App</h3>
-                                <p>Fully functional Multi-Language Learning Web Application
-                                  • User authentication and profile system.</p>
-                                <a href="https://language-translator-zeta-nine.vercel.app/"><i class="fa fa-link-slash">link</i></a>
-                            </div>
-                        </div>
-                         <div class="portfolio-item">
-                            <img src="foodSite.png" alt="Portfolio 4">
-                            <div class="portfolio-info">
-                                <h3>Food Website</h3>
-                                <p>A simple food website for online food ordering</p>
-                                <a href="https://foodwebcom.vercel.app/"><i class="fa fa-link-slash">link</i></a>
-                            </div>
-                        </div>
+                         
                     </div>
                     <a href="#" class="btn">See More</a>
                 </div>
@@ -176,10 +178,10 @@
                             <a href="MyResume.pdf" download="" class=" btn btn2">Download CV</a>
                         </div>
                         <div class="contact-right">
-                            <form action="">
-                            <input type="text" name="Name" placeholder="Your Name" required>
-                            <input type="email" name="email" placeholder="Your Email" required>
-                            <textarea name="message" rows="6" placeholder="Enter your Message"></textarea>
+                            <form action="" id="contactForm">
+                            <input type="text" name="Name" placeholder="Your Name" maxlength="100" required>
+                            <input type="email" name="Email" placeholder="Your Email" maxlength="100" required>
+                            <textarea name="Message" rows="6" placeholder="Enter your Message" maxlength="1000" required></textarea>
                             <button type="submit" placeholder="Submit" class="btn2">Submit</button>
                             </form>
                         </div>
@@ -189,33 +191,6 @@
                         <p> Copyright@Sukurat.Made by Modolan</p>
                     </div>
                    </div>
-            <script>
-                var tabLinks = document.getElementsByClassName('tab-links');
-                var tabContents = document.getElementsByClassName('tab-contents');
-                function openTab(tabName) {
-                    for (tablink of tabLinks) {
-                        tablink.classList.remove('active-link');
-                    }
-                    for (tabContent of tabContents) {
-                        tabContent.classList.remove('active-tab');
-                    }
-                    event.currentTarget.classList.add('active-link');
-                    document.getElementById(tabName).classList.add('active-tab');
-                }
-            </script>
-            <script>
-                var sidemenu = document.getElementById("sidemenu");
-
-                function openmenu(){
-                    sidemenu.style.right = 0;
-                }
-            </script>
-            <script>
-                var sidemenu = document.getElementById("sidemenu");
-
-                function closemenu(){
-                    sidemenu.style.right = "-200px";
-                }
-            </script>
+            <script src="portfolio.js"></script>
 </body>
 </html>
