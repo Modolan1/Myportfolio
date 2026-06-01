@@ -14,7 +14,7 @@ body {
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(background.jpeg);
+    background-image: url(portifolio-hero-image.jpg);
     background-size: cover;
     background-position: center;
     /* image-rendering: crisp-edges; */
@@ -36,6 +36,38 @@ nav{
     justify-content: space-between;
     /* flex-wrap: wrap; */
 } 
+
+.nav-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav-logo-mark {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff004f;
+    border-radius: 50%;
+    color: #fff;
+    background: linear-gradient(135deg, #ff004f, #ff5c8a);
+    box-shadow: 0 0 18px rgba(255, 0, 79, 0.24);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-logo-text {
+    color: #fff;
+    font-size: 20px;
+}
 
 nav ul li{
     display: inline-block;
