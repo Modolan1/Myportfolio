@@ -26,14 +26,14 @@ function validateText(text, maxLength = 1000) {
 var tabLinks = document.getElementsByClassName('tab-links');
 var tabContents = document.getElementsByClassName('tab-contents');
 
-function openTab(tabName) {
+function openTab(tabName, tabLink) {
     for (let tablink of tabLinks) {
         tablink.classList.remove('active-link');
     }
     for (let tabContent of tabContents) {
         tabContent.classList.remove('active-tab');
     }
-    event.currentTarget.classList.add('active-link');
+    tabLink.classList.add('active-link');
     document.getElementById(tabName).classList.add('active-tab');
 }
 
@@ -47,6 +47,25 @@ function openmenu() {
 function closemenu() {
     sidemenu.style.right = '-200px';
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var openMenuBtn = document.getElementById('openMenuBtn');
+    var closeMenuBtn = document.getElementById('closeMenuBtn');
+
+    if (openMenuBtn) {
+        openMenuBtn.addEventListener('click', openmenu);
+    }
+
+    if (closeMenuBtn) {
+        closeMenuBtn.addEventListener('click', closemenu);
+    }
+
+    for (let tabLink of tabLinks) {
+        tabLink.addEventListener('click', function() {
+            openTab(this.dataset.tab, this);
+        });
+    }
+});
 
 // Form validation and submission with XSS protection
 document.addEventListener('DOMContentLoaded', function() {

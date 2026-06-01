@@ -21,9 +21,9 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <div id="times"><i class="fas fa-times" onclick="closemenu()"></i></div>
+                <div id="times"><i class="fas fa-times" id="closeMenuBtn"></i></div>
             </ul>
-            <div id="menu-bar"><i class="fas fa-bars" onclick="openmenu()"></i></div>
+            <div id="menu-bar"><i class="fas fa-bars" id="openMenuBtn"></i></div>
             </nav>
             <div class="header-text">
                 <h1>Hi I'm <span>Sukurat,</span> a passionate Web Developer</h1>
@@ -43,9 +43,9 @@
                         <h1 class="sub-title">About Me</h1>
                         <p>I am a creative and detail-oriented Web Developer with extensive experience in designing and developing interactive websites and web applications. I focus on writing clean, efficient code and creating seamless user experiences. My goal is to combine functionality with aesthetics to deliver digital solutions that make an impact!</p>
                         <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
-                            <p class="tab-links" onclick="openTab('experience')">Experience </p>
-                            <p class="tab-links" onclick="openTab('education')">Education</p>
+                            <p class="tab-links active-link" data-tab="skills">Skills</p>
+                            <p class="tab-links" data-tab="experience">Experience </p>
+                            <p class="tab-links" data-tab="education">Education</p>
                         </div>
                         <div class="tab-contents active-tab" id="skills">
                             <ul>
@@ -83,20 +83,20 @@
                         <div class="service-item">
                             <i class="fa-solid fa-record-vinyl"></i>
                             <h2>UI/UX</h2>
-                            <p>Developed front-end application with TypeScript/JavaScript, React, HTML, CSS and related front-end technologies.</p>
+                            <p>Developed front-end application with TypeScript/JavaScript, React-Vite, HTML, CSS, tailwind CSS and related front-end technologies.</p>
                             <a href="#" >Learn More</a>
                         </div>
                         
                         <div class="service-item">
                             <i class="fa-solid fa-image"></i>
                             <h2>Backend development</h2>
-                            <p>Developed back-end application with Node.js, Next.js, and related back-end frameworks.</p>
+                            <p>Developed back-end application with Node.js,Next.js, next.js Payload CMS, ASP.net and related back-end frameworks.</p>
                             <a href="#" >Learn More</a>
                         </div>
                         <div class="service-item">
                             <i class="fa-solid fa-file-video"></i>
                             <h2>Database Design</h2>
-                            <p>Designed databases using MySQL, including database design, query optimization, and data modelling,• Integrated the use of APIs in designing and implementing applications</p>
+                            <p>Designed databases using MySQL, Mariadb, Postgres MongoDB including database design, query optimization, and data modelling,• Integrated the use of APIs in designing and implementing applications</p>
                             <a href="#">Learn More</a>
                         </div>
                     </div>
