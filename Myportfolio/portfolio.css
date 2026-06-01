@@ -266,6 +266,7 @@ nav ul li a:hover::after{
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    aspect-ratio: 4 / 3;
 }
 .portfolio-item img {
     width: 100%;
@@ -428,6 +429,25 @@ nav .fas{
 /* .........css for small screen.......... */
 
 @media only screen and (max-width:600px){
+    .container {
+        padding: 10px 6%;
+    }
+
+    .nav-logo {
+        font-size: 18px;
+        gap: 8px;
+    }
+
+    .nav-logo-mark {
+        width: 38px;
+        height: 38px;
+        font-size: 12px;
+    }
+
+    .nav-logo-text {
+        font-size: 17px;
+    }
+
     .header-text{
         margin-top:50%;
         font-size: 16px;
@@ -446,11 +466,11 @@ nav .fas{
         background: #ff004f;
         position: fixed;
         top: 0;
-        right: 0;
+        right: -200px;
         width: 200px;
         height: 100vh;
         padding-top: 50px;
-        z-index: 2;
+        z-index: 10;
         transition: right 0.5s;
 
     }
@@ -463,6 +483,11 @@ nav .fas{
         position: absolute;
         top: 25px;
         left: 25px;
+        cursor: pointer;
+    }
+
+    #menu-bar,
+    #times {
         cursor: pointer;
     }
 

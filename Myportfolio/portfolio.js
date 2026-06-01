@@ -51,6 +51,7 @@ function closemenu() {
 document.addEventListener('DOMContentLoaded', function() {
     var openMenuBtn = document.getElementById('openMenuBtn');
     var closeMenuBtn = document.getElementById('closeMenuBtn');
+    var navLinks = sidemenu ? sidemenu.querySelectorAll('a') : [];
 
     if (openMenuBtn) {
         openMenuBtn.addEventListener('click', openmenu);
@@ -58,6 +59,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (closeMenuBtn) {
         closeMenuBtn.addEventListener('click', closemenu);
+    }
+
+    for (let navLink of navLinks) {
+        navLink.addEventListener('click', function() {
+            if (window.innerWidth <= 600) {
+                closemenu();
+            }
+        });
     }
 
     for (let tabLink of tabLinks) {
